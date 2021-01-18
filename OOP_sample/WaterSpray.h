@@ -1,0 +1,27 @@
+#pragma once
+#include <algorithm>
+#include "SprayBody.h"
+#include "SprayHead.h"
+#include "EBottleSize.h"
+#include "ESprayHeadSpeed.h"
+
+class WaterSpray {
+public:
+	WaterSpray(SprayHead* head, SprayBody* body);
+	WaterSpray(eSprayHeadSpeed speed, eBottleSize size);
+	~WaterSpray();
+	SprayHead* GetHead();
+	SprayBody* GetBody();
+	void SetHead(SprayHead* head);
+	void SetBody(SprayBody* body);
+	void Spray();
+	int GetCapacity();
+	int GetRemainingWater();
+	int GetSprayAmount();
+	void FillUp();
+	void AddWater(int water);
+	
+private:
+	SprayHead* mHead;
+	SprayBody* mBody;
+};
