@@ -4,6 +4,9 @@
     <Filter Include="1_FlowerPot_and_WaterSpray">
       <UniqueIdentifier>{2cdba907-6dc4-42f7-9e5a-f6fad3036a78}</UniqueIdentifier>
     </Filter>
+    <Filter Include="2_Jk_Tunes">
+      <UniqueIdentifier>{363ad135-8314-4f3a-a969-27ac2cf16280}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="FlowerPot.h">
@@ -24,6 +27,15 @@
     <ClInclude Include="EBottleSize.h">
       <Filter>1_FlowerPot_and_WaterSpray</Filter>
     </ClInclude>
+    <ClInclude Include="Song.h">
+      <Filter>2_Jk_Tunes</Filter>
+    </ClInclude>
+    <ClInclude Include="Playlist.h">
+      <Filter>2_Jk_Tunes</Filter>
+    </ClInclude>
+    <ClInclude Include="JkTunes.h">
+      <Filter>2_Jk_Tunes</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp" />
@@ -33,12 +45,22 @@
     <ClCompile Include="WaterSpray.cpp">
       <Filter>1_FlowerPot_and_WaterSpray</Filter>
     </ClCompile>
-    <ClCompile Include="SprayBody.cpp" />
-    <ClCompile Include="SprayHead.cpp" />
+    <ClCompile Include="SprayBody.cpp">
+      <Filter>1_FlowerPot_and_WaterSpray</Filter>
+    </ClCompile>
+    <ClCompile Include="SprayHead.cpp">
+      <Filter>1_FlowerPot_and_WaterSpray</Filter>
+    </ClCompile>
+    <ClCompile Include="Song.cpp">
+      <Filter>2_Jk_Tunes</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="README.md">
+    <None Include="1_README.md">
       <Filter>1_FlowerPot_and_WaterSpray</Filter>
+    </None>
+    <None Include="2_README.md">
+      <Filter>2_Jk_Tunes</Filter>
     </None>
   </ItemGroup>
 </Project>

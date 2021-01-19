@@ -3,6 +3,8 @@
 #include "EBottleSize.h"
 #include "ESprayHeadSpeed.h"
 
+#include "Song.h"
+
 #include <cassert>
 #include <iostream>
 
@@ -12,13 +14,15 @@ void SprayToFlowerPotTest(void);
 
 int main(void)
 {
-	// WaterSpray Test
-	WaterSprayTest();
+	// 1 FlowerPot and WaterSpray Test code
+	//WaterSprayTest();
+	//FlowerPotTest();
+	//SprayToFlowerPotTest();
 
-	// FlowerPot Test
-	FlowerPotTest();
+	// 2 Jk Tunes Test code
+	Song* song = new Song("Is good", "atom", 180000);
+	song->play();
 
-	SprayToFlowerPotTest();
 }
 
 void WaterSprayTest(void)
