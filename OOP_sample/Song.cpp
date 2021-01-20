@@ -37,7 +37,7 @@ void Song::SetPlayTimeInMilliSeconds(int playTimeInMilliSeconds)
 	mPlayTimeInMilliSeconds = playTimeInMilliSeconds;
 }
 
-void Song::play()
+void Song::Play()
 {
 	std::cout << "Playing " << mName << " by " << mArtist 
 		<< ". Duration is " << mPlayTimeInMilliSeconds << " milliseconds" << std::endl;

@@ -4,6 +4,8 @@
 #include "ESprayHeadSpeed.h"
 
 #include "Song.h"
+#include "Playlist.h"
+#include "JkTunes.h"
 
 #include <cassert>
 #include <iostream>
@@ -11,6 +13,10 @@
 void WaterSprayTest(void);
 void FlowerPotTest(void);
 void SprayToFlowerPotTest(void);
+
+void SongAndPlayListTest(void);
+
+using namespace std;
 
 int main(void)
 {
@@ -20,9 +26,8 @@ int main(void)
 	//SprayToFlowerPotTest();
 
 	// 2 Jk Tunes Test code
-	Song* song = new Song("Is good", "atom", 180000);
-	song->play();
-
+	SongAndPlayListTest();
+	
 }
 
 void WaterSprayTest(void)
@@ -89,4 +94,26 @@ void SprayToFlowerPotTest(void)
 
 	flower.LiveAnotherDay();
 	assert(!flower.IsAlive());
+}
+
+void SongAndPlayListTest(void)
+{
+	Song* song1 = new Song("name : song1", "atom", 180000);
+	song1->Play();
+
+	Song* song2 = new Song("name : song2", "tom", 180000);
+	Song* song3 = new Song("name : song3", "atom", 180000);
+
+	vector<Song*> songs;
+	songs.push_back(song1);
+	songs.push_back(song2);
+	songs.push_back(song3);
+
+	PlayList* playList = new PlayList(songs, "goodMusic");
+	Song* song4 = new Song("name : song4", "atom", 180000);
+
+	assert(playList->RemoveSong("name : song1"));
+	assert(!playList->RemoveSong("name : song4"));
+
+	playList->AddSong(song4);
 }

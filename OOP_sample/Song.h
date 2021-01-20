@@ -13,7 +13,7 @@ public:
 	void SetName(std::string name);
 	void SetArtist(std::string artist);
 	void SetPlayTimeInMilliSeconds(int playTimeInMilliSeconds);
-	void play();
+	void Play();
 private:
 	std::string mArtist;
 	std::string mName;

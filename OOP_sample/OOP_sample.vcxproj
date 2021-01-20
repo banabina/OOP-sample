@@ -151,7 +151,9 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="FlowerPot.cpp" />
+    <ClCompile Include="JkTunes.cpp" />
     <ClCompile Include="Main.cpp" />
+    <ClCompile Include="Playlist.cpp" />
     <ClCompile Include="Song.cpp" />
     <ClCompile Include="SprayBody.cpp" />
     <ClCompile Include="SprayHead.cpp" />

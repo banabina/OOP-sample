@@ -54,6 +54,12 @@
     <ClCompile Include="Song.cpp">
       <Filter>2_Jk_Tunes</Filter>
     </ClCompile>
+    <ClCompile Include="JkTunes.cpp">
+      <Filter>2_Jk_Tunes</Filter>
+    </ClCompile>
+    <ClCompile Include="Playlist.cpp">
+      <Filter>2_Jk_Tunes</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="1_README.md">
