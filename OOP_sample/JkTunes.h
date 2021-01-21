@@ -10,6 +10,8 @@ class JkTunes
 public:
 	JkTunes() = default;
 	JkTunes(std::vector<Song*> songs, std::vector<PlayList*> playLists);
+	JkTunes(const JkTunes& other) = delete;
+	JkTunes& operator=(const JkTunes& rhs) = delete;
 	int GetSongCount();
 	void AddSong(Song* song);
 	bool RemoveSong(std::string songName);
