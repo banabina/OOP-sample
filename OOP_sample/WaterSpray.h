@@ -9,6 +9,8 @@ class WaterSpray {
 public:
 	WaterSpray(SprayHead* head, SprayBody* body);
 	WaterSpray(eSprayHeadSpeed speed, eBottleSize size);
+	WaterSpray(const WaterSpray& other);
+	WaterSpray& operator=(const WaterSpray& rhs);
 	~WaterSpray();
 	SprayHead* GetHead();
 	SprayBody* GetBody();

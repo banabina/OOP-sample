@@ -4,6 +4,8 @@
 class SprayBody {
 public:
 	SprayBody(int capacity);
+	SprayBody(const SprayBody& other) = default;
+	~SprayBody() = default;
 	int GetCapacity();
 	int GetRemainingWater();
 	void FillUp();

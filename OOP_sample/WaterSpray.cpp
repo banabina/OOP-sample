@@ -37,6 +37,35 @@ WaterSpray::WaterSpray(eSprayHeadSpeed speed, eBottleSize size)
 	}
 }
 
+WaterSpray::WaterSpray(const WaterSpray& other)
+{
+	SprayHead* head = new SprayHead(other.mHead->GetSprayAmount());
+	SprayBody* body = new SprayBody(other.mBody->GetCapacity());
+
+	mHead = head;
+	mBody = body;
+
+}
+
+WaterSpray& WaterSpray::operator=(const WaterSpray& rhs)
+{
+	if (this == &rhs)
+	{
+		return *this;
+	}
+
+	delete mHead;
+	delete mBody;
+
+	SprayHead* head = new SprayHead(rhs.mHead->GetSprayAmount());
+	SprayBody* body = new SprayBody(rhs.mBody->GetCapacity());
+
+	mHead = head;
+	mBody = body;
+
+	return *this;
+}
+
 WaterSpray::~WaterSpray()
 {
 	if (mHead != nullptr)

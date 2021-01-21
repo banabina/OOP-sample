@@ -75,6 +75,10 @@ void SprayToFlowerPotTest(void)
 	FlowerPot flower(100);
 
 	WaterSpray spray(eSprayHeadSpeed::FAST, eBottleSize::MEDIUM);
+	WaterSpray spray2(spray);
+
+	assert(spray2.GetBody()->GetCapacity() == 500);
+	assert(spray2.GetHead()->GetSprayAmount() == 50);
 
 	spray.AddWater(500);
 

@@ -5,6 +5,8 @@
 class FlowerPot {
 public:
 	FlowerPot(int minDailyWater);
+	FlowerPot(const FlowerPot& other) = default;
+	~FlowerPot() = default;
 	void LiveAnotherDay(void);
 	int GetMinDailyWater();
 	int GetDailyWaterReceived();
