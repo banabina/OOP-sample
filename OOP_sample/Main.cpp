@@ -27,7 +27,27 @@ int main(void)
 
 	// 2 Jk Tunes Test code
 	SongAndPlayListTest();
-	
+
+	vector<Song*> songs;
+	Song song1("song1", "artist1", 3000);
+	Song song2("song2", "artist2", 3000);
+	Song song3("song3", "artist3", 3000);
+	Song song4("song4", "artist4", 3000);
+
+	songs.push_back(&song1);
+	songs.push_back(&song2);
+	songs.push_back(&song3);
+
+	PlayList playList1(songs, "good");
+	PlayList playList2(playList1);
+
+	playList2.RemoveSong("song1");
+
+	playList1.RemoveSong("song1");
+
+
+	playList2.AddSong(&song4);
+
 }
 
 void WaterSprayTest(void)

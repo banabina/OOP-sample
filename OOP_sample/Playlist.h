@@ -8,6 +8,8 @@ class PlayList
 {
 public:
 	PlayList(std::vector<Song*> songs, std::string name);
+	PlayList(const PlayList& other) = default;
+	PlayList& operator=(const PlayList& rhs) = default;
 	std::string GetName();
 	std::vector<Song*> GetSongs();
 	void SetName(std::string name);

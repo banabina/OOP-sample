@@ -7,6 +7,9 @@ class Song
 {
 public:
 	Song(std::string name, std::string artist, int playTimeInMilliSeconds);
+	Song(const Song& other) = default;
+	Song& operator=(const Song& rhs) = default;
+	~Song() = default;
 	std::string GetName();
 	std::string GetArtist();
 	int GetPlayTimeInMilliSeconds();
