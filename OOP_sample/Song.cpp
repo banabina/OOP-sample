@@ -7,17 +7,17 @@ Song::Song(std::string name, std::string artist, int playTimeInMilliSeconds)
 {
 }
 
-std::string Song::GetName()
+std::string Song::GetName() const
 {
 	return mName;
 }
 
-std::string Song::GetArtist()
+std::string Song::GetArtist() const
 {
 	return mArtist;
 }
 
-int Song::GetPlayTimeInMilliSeconds()
+int Song::GetPlayTimeInMilliSeconds() const
 {
 	return mPlayTimeInMilliSeconds;
 }
@@ -37,7 +37,7 @@ void Song::SetPlayTimeInMilliSeconds(int playTimeInMilliSeconds)
 	mPlayTimeInMilliSeconds = playTimeInMilliSeconds;
 }
 
-void Song::Play()
+void Song::Play() const
 {
 	std::cout << "Playing " << mName << " by " << mArtist 
 		<< ". Duration is " << mPlayTimeInMilliSeconds << " milliseconds" << std::endl;

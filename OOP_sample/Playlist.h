@@ -10,8 +10,8 @@ public:
 	PlayList(std::vector<Song*> songs, std::string name);
 	PlayList(const PlayList& other) = default;
 	PlayList& operator=(const PlayList& rhs) = default;
-	std::string GetName();
-	std::vector<Song*> GetSongs();
+	std::string GetName() const;
+	std::vector<Song*> GetSongs() const;
 	void SetName(std::string name);
 	void SetSongs(std::vector<Song*> songs);
 	void AddSong(Song* song);

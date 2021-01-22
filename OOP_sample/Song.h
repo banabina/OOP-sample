@@ -10,13 +10,13 @@ public:
 	Song(const Song& other) = default;
 	Song& operator=(const Song& rhs) = default;
 	~Song() = default;
-	std::string GetName();
-	std::string GetArtist();
-	int GetPlayTimeInMilliSeconds();
+	std::string GetName() const;
+	std::string GetArtist() const;
+	int GetPlayTimeInMilliSeconds() const;
 	void SetName(std::string name);
 	void SetArtist(std::string artist);
 	void SetPlayTimeInMilliSeconds(int playTimeInMilliSeconds);
-	void Play();
+	void Play() const;
 private:
 	std::string mArtist;
 	std::string mName;

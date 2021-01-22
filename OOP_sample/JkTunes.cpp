@@ -6,7 +6,7 @@ JkTunes::JkTunes(std::vector<Song*> songs, std::vector<PlayList*> playLists)
 {
 }
 
-int JkTunes::GetSongCount()
+int JkTunes::GetSongCount() const
 {
 	return mSongs.size();
 }

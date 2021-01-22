@@ -6,12 +6,12 @@ PlayList::PlayList(std::vector<Song*> songs, std::string name)
 {
 }
 
-std::string PlayList::GetName()
+std::string PlayList::GetName() const
 {
 	return mName;
 }
 
-std::vector<Song*> PlayList::GetSongs()
+std::vector<Song*> PlayList::GetSongs() const
 {
 	return mSongs;
 }

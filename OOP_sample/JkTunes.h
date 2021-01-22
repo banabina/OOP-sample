@@ -12,7 +12,7 @@ public:
 	JkTunes(std::vector<Song*> songs, std::vector<PlayList*> playLists);
 	JkTunes(const JkTunes& other) = delete;
 	JkTunes& operator=(const JkTunes& rhs) = delete;
-	int GetSongCount();
+	int GetSongCount() const;
 	void AddSong(Song* song);
 	bool RemoveSong(std::string songName);
 	void AddPlayList(PlayList* playList);
