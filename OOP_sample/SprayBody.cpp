@@ -6,12 +6,12 @@ SprayBody::SprayBody(int capacity)
 {
 }
 
-int SprayBody::GetCapacity()
+int SprayBody::GetCapacity() const
 {
 	return mCapacity;
 }
 
-int SprayBody::GetRemainingWater()
+int SprayBody::GetRemainingWater() const
 {
 	return mRemainingWater;
 }

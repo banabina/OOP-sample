@@ -6,8 +6,8 @@ public:
 	SprayHead(int sprayAmount);
 	SprayHead(const SprayHead& other) = default;
 	~SprayHead() = default;
-	int GetSprayAmount();
-	void sprayFrom(SprayBody body);
+	int GetSprayAmount() const;
+	void sprayFrom(SprayBody body) const;
 private:
 	int mSprayAmount;
 };

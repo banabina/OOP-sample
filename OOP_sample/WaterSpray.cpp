@@ -85,17 +85,17 @@ void WaterSpray::Spray()
 	mBody->ReduceWater(mHead->GetSprayAmount());
 }
 
-int WaterSpray::GetCapacity()
+int WaterSpray::GetCapacity() const
 {
 	return mBody->GetCapacity();
 }
 
-int WaterSpray::GetRemainingWater()
+int WaterSpray::GetRemainingWater() const
 {
 	return mBody->GetRemainingWater();
 }
 
-int WaterSpray::GetSprayAmount()
+int WaterSpray::GetSprayAmount() const
 {
 	return mHead->GetSprayAmount();
 }

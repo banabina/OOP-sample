@@ -6,8 +6,8 @@ public:
 	SprayBody(int capacity);
 	SprayBody(const SprayBody& other) = default;
 	~SprayBody() = default;
-	int GetCapacity();
-	int GetRemainingWater();
+	int GetCapacity() const;
+	int GetRemainingWater() const;
 	void FillUp();
 	void AddWater(int water);
 	void ReduceWater(int water);

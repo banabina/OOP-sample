@@ -17,9 +17,9 @@ public:
 	void SetHead(SprayHead* head);
 	void SetBody(SprayBody* body);
 	void Spray();
-	int GetCapacity();
-	int GetRemainingWater();
-	int GetSprayAmount();
+	int GetCapacity() const;
+	int GetRemainingWater() const;
+	int GetSprayAmount() const;
 	void FillUp();
 	void AddWater(int water);
 	

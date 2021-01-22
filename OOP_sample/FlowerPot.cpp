@@ -16,17 +16,17 @@ void FlowerPot::LiveAnotherDay(void)
     mDailyWaterReceived = 0;
 }
 
-int FlowerPot::GetMinDailyWater()
+int FlowerPot::GetMinDailyWater() const
 {
     return mMinDailyWater;
 }
 
-int FlowerPot::GetDailyWaterReceived()
+int FlowerPot::GetDailyWaterReceived() const
 {
     return mDailyWaterReceived;
 }
 
-bool FlowerPot::IsAlive()
+bool FlowerPot::IsAlive() const
 {
     return mbAlive;
 }

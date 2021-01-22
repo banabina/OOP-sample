@@ -5,12 +5,12 @@ SprayHead::SprayHead(int sprayAmount)
 {
 }
 
-int SprayHead::GetSprayAmount()
+int SprayHead::GetSprayAmount() const
 {
 	return mSprayAmount;
 }
 
-void SprayHead::sprayFrom(SprayBody body)
+void SprayHead::sprayFrom(SprayBody body) const
 {
 	body.ReduceWater(mSprayAmount);
 }

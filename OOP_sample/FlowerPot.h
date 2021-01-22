@@ -8,9 +8,9 @@ public:
 	FlowerPot(const FlowerPot& other) = default;
 	~FlowerPot() = default;
 	void LiveAnotherDay(void);
-	int GetMinDailyWater();
-	int GetDailyWaterReceived();
-	bool IsAlive();
+	int GetMinDailyWater() const;
+	int GetDailyWaterReceived() const;
+	bool IsAlive() const;
 	void AddWater(WaterSpray& spray);
 private:
 	bool mbAlive;
