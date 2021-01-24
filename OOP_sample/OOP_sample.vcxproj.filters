@@ -7,6 +7,9 @@
     <Filter Include="2_Jk_Tunes">
       <UniqueIdentifier>{363ad135-8314-4f3a-a969-27ac2cf16280}</UniqueIdentifier>
     </Filter>
+    <Filter Include="3_Clock">
+      <UniqueIdentifier>{2fe981fe-13b5-488b-8ec3-fb688a23c5ef}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="FlowerPot.h">
@@ -67,6 +70,9 @@
     </None>
     <None Include="2_README.md">
       <Filter>2_Jk_Tunes</Filter>
+    </None>
+    <None Include="3_README.md">
+      <Filter>3_Clock</Filter>
     </None>
   </ItemGroup>
 </Project>

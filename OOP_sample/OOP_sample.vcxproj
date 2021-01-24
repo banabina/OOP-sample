@@ -162,6 +162,7 @@
   <ItemGroup>
     <None Include="1_README.md" />
     <None Include="2_README.md" />
+    <None Include="3_README.md" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
