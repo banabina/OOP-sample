@@ -139,6 +139,8 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="AnalogClock.h" />
+    <ClInclude Include="Clock.h" />
     <ClInclude Include="EBottleSize.h" />
     <ClInclude Include="ESprayHeadSpeed.h" />
     <ClInclude Include="FlowerPot.h" />
@@ -150,6 +152,8 @@
     <ClInclude Include="WaterSpray.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="AnalogClock.cpp" />
+    <ClCompile Include="Clock.cpp" />
     <ClCompile Include="FlowerPot.cpp" />
     <ClCompile Include="JkTunes.cpp" />
     <ClCompile Include="Main.cpp" />

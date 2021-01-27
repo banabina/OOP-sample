@@ -2,6 +2,8 @@
 #include "WaterSpray.h"
 #include "EBottleSize.h"
 #include "ESprayHeadSpeed.h"
+#include "Clock.h"
+#include "AnalogClock.h"
 
 #include "Song.h"
 #include "Playlist.h"
@@ -9,6 +11,7 @@
 
 #include <cassert>
 #include <iostream>
+#include <cstdio>
 
 void WaterSprayTest(void);
 void FlowerPotTest(void);
@@ -28,26 +31,15 @@ int main(void)
 	// 2 Jk Tunes Test code
 	SongAndPlayListTest();
 
-	vector<Song*> songs;
-	Song song1("song1", "artist1", 3000);
-	Song song2("song2", "artist2", 3000);
-	Song song3("song3", "artist3", 3000);
-	Song song4("song4", "artist4", 3000);
+	// 3 Clock
+	AnalogClock* clock = new AnalogClock();
 
-	songs.push_back(&song1);
-	songs.push_back(&song2);
-	songs.push_back(&song3);
+	clock->AddSeconds((short)12615);
+	printf("%d:%d:%d\n", clock->GetHours(), clock->GetMinutes(), clock->GetSeconds());
 
-	PlayList playList1(songs, "good");
-	PlayList playList2(playList1);
-
-	playList2.RemoveSong("song1");
-
-	playList1.RemoveSong("song1");
-
-
-	playList2.AddSong(&song4);
-
+	cout << "hour: " << clock->GetHourHandAngle() << endl;
+	cout << "minute: " << clock->GetMinuteHandAngle() << endl;
+	cout << "second: " << clock->GetSecondHandAngle() << endl;
 }
 
 void WaterSprayTest(void)

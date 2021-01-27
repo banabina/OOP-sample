@@ -39,6 +39,12 @@
     <ClInclude Include="JkTunes.h">
       <Filter>2_Jk_Tunes</Filter>
     </ClInclude>
+    <ClInclude Include="Clock.h">
+      <Filter>3_Clock</Filter>
+    </ClInclude>
+    <ClInclude Include="AnalogClock.h">
+      <Filter>3_Clock</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp" />
@@ -62,6 +68,12 @@
     </ClCompile>
     <ClCompile Include="Playlist.cpp">
       <Filter>2_Jk_Tunes</Filter>
+    </ClCompile>
+    <ClCompile Include="Clock.cpp">
+      <Filter>3_Clock</Filter>
+    </ClCompile>
+    <ClCompile Include="AnalogClock.cpp">
+      <Filter>3_Clock</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
