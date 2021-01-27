@@ -2,12 +2,14 @@
 #include "WaterSpray.h"
 #include "EBottleSize.h"
 #include "ESprayHeadSpeed.h"
-#include "Clock.h"
-#include "AnalogClock.h"
 
 #include "Song.h"
 #include "Playlist.h"
 #include "JkTunes.h"
+
+#include "Clock.h"
+#include "AnalogClock.h"
+#include "DigitalClock.h"
 
 #include <cassert>
 #include <iostream>
@@ -32,14 +34,26 @@ int main(void)
 	SongAndPlayListTest();
 
 	// 3 Clock
-	AnalogClock* clock = new AnalogClock();
+	Clock ck1(100);
+	Clock ck2(ck1);
+	Clock ck3;
+	Clock ck4;
+	Clock ck5(20);
+	printf("%d:%d:%d\n", ck1.GetHours(), ck1.GetMinutes(), ck1.GetSeconds());
 
-	clock->AddSeconds((short)12615);
-	printf("%d:%d:%d\n", clock->GetHours(), clock->GetMinutes(), clock->GetSeconds());
+	//ck3 = ck5;
 
-	cout << "hour: " << clock->GetHourHandAngle() << endl;
-	cout << "minute: " << clock->GetMinuteHandAngle() << endl;
-	cout << "second: " << clock->GetSecondHandAngle() << endl;
+	AnalogClock* analogClock = new AnalogClock();
+
+	analogClock->AddSeconds((short)8219);
+	printf("%d:%d:%d\n", analogClock->GetHours(), analogClock->GetMinutes(), analogClock->GetSeconds());
+	analogClock->Tick();
+	printf("%d:%d:%d\n", analogClock->GetHours(), analogClock->GetMinutes(), analogClock->GetSeconds());
+
+	DigitalClock* digitalClock = new DigitalClock(8219);
+	printf("%s %d:%d:%d\n", digitalClock->IsBeforeMidday() ? "AM" : "PM", digitalClock->GetHours(), digitalClock->GetMinutes(), digitalClock->GetSeconds());
+	digitalClock->Tick();
+	printf("%s %d:%d:%d\n", digitalClock->IsBeforeMidday() ? "AM" : "PM", digitalClock->GetHours(), digitalClock->GetMinutes(), digitalClock->GetSeconds());
 }
 
 void WaterSprayTest(void)

@@ -3,7 +3,10 @@ class Clock
 {
 public:
 	Clock();
+	Clock(unsigned int seconds);
+	Clock(const Clock& other) = default;
 	~Clock() = default;
+	Clock& operator=(const Clock& rhs);
 	unsigned char GetHours();
 	unsigned char GetMinutes();
 	unsigned char GetSeconds();
@@ -11,5 +14,5 @@ public:
 	void Mount();
 protected:
 	unsigned int mSeconds;
-	const int HALF_DAY_IN_SECONDS = 60 * 60 * 12;
+	const int DAY_IN_SECONDS = 60 * 60 * 24;
 };

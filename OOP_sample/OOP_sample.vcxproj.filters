@@ -45,6 +45,9 @@
     <ClInclude Include="AnalogClock.h">
       <Filter>3_Clock</Filter>
     </ClInclude>
+    <ClInclude Include="DigitalClock.h">
+      <Filter>3_Clock</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp" />
@@ -73,6 +76,9 @@
       <Filter>3_Clock</Filter>
     </ClCompile>
     <ClCompile Include="AnalogClock.cpp">
+      <Filter>3_Clock</Filter>
+    </ClCompile>
+    <ClCompile Include="DigitalClock.cpp">
       <Filter>3_Clock</Filter>
     </ClCompile>
   </ItemGroup>

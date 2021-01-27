@@ -5,6 +5,17 @@ Clock::Clock()
 {
 }
 
+Clock::Clock(unsigned int seconds)
+	: mSeconds(seconds)
+{
+}
+
+Clock& Clock::operator=(const Clock& rhs)
+{
+	mSeconds = rhs.mSeconds;
+	return *this;
+}
+
 unsigned char Clock::GetHours()
 {
 	int hours = mSeconds / 60 / 60;
@@ -25,7 +36,7 @@ unsigned char Clock::GetSeconds()
 
 void Clock::Tick()
 {
-	mSeconds = (mSeconds + 1) % HALF_DAY_IN_SECONDS;
+	mSeconds = (mSeconds + 1) % DAY_IN_SECONDS;
 }
 
 void Clock::Mount()

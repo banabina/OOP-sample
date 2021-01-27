@@ -141,6 +141,7 @@
   <ItemGroup>
     <ClInclude Include="AnalogClock.h" />
     <ClInclude Include="Clock.h" />
+    <ClInclude Include="DigitalClock.h" />
     <ClInclude Include="EBottleSize.h" />
     <ClInclude Include="ESprayHeadSpeed.h" />
     <ClInclude Include="FlowerPot.h" />
@@ -154,6 +155,7 @@
   <ItemGroup>
     <ClCompile Include="AnalogClock.cpp" />
     <ClCompile Include="Clock.cpp" />
+    <ClCompile Include="DigitalClock.cpp" />
     <ClCompile Include="FlowerPot.cpp" />
     <ClCompile Include="JkTunes.cpp" />
     <ClCompile Include="Main.cpp" />

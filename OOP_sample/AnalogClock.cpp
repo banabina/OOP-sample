@@ -5,6 +5,11 @@ AnalogClock::AnalogClock()
 {
 }
 
+AnalogClock::AnalogClock(unsigned int seconds)
+	: Clock(seconds)
+{
+}
+
 unsigned int AnalogClock::GetSecondHandAngle()
 {
 	return 0;
@@ -22,15 +27,21 @@ unsigned int AnalogClock::GetHourHandAngle()
 	return (unsigned int)(hours * ANGLE_PER_HOUR + GetMinutes() * ANGLE_PER_HOUR / 60);
 }
 
+unsigned char AnalogClock::GetHours12hourClock()
+{
+	int hours = GetHours() % 12;
+	return (unsigned char)(hours == 0 ? 12 : hours);
+}
+
 void AnalogClock::AddSeconds(short seconds)
 {
 	int value = mSeconds + seconds;
 	while (value < 0)
 	{
-		value += HALF_DAY_IN_SECONDS;
+		value += DAY_IN_SECONDS;
 	}
 
-	mSeconds = value % HALF_DAY_IN_SECONDS;
+	mSeconds = value % DAY_IN_SECONDS;
 }
 
 
