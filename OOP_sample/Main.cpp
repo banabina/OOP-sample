@@ -21,6 +21,8 @@ void SprayToFlowerPotTest(void);
 
 void SongAndPlayListTest(void);
 
+void ClockTest(void);
+
 using namespace std;
 
 int main(void)
@@ -34,26 +36,9 @@ int main(void)
 	SongAndPlayListTest();
 
 	// 3 Clock
-	Clock ck1(100);
-	Clock ck2(ck1);
-	Clock ck3;
-	Clock ck4;
-	Clock ck5(20);
-	printf("%d:%d:%d\n", ck1.GetHours(), ck1.GetMinutes(), ck1.GetSeconds());
+	ClockTest();
 
-	//ck3 = ck5;
 
-	AnalogClock* analogClock = new AnalogClock();
-
-	analogClock->AddSeconds((short)8219);
-	printf("%d:%d:%d\n", analogClock->GetHours(), analogClock->GetMinutes(), analogClock->GetSeconds());
-	analogClock->Tick();
-	printf("%d:%d:%d\n", analogClock->GetHours(), analogClock->GetMinutes(), analogClock->GetSeconds());
-
-	DigitalClock* digitalClock = new DigitalClock(8219);
-	printf("%s %d:%d:%d\n", digitalClock->IsBeforeMidday() ? "AM" : "PM", digitalClock->GetHours(), digitalClock->GetMinutes(), digitalClock->GetSeconds());
-	digitalClock->Tick();
-	printf("%s %d:%d:%d\n", digitalClock->IsBeforeMidday() ? "AM" : "PM", digitalClock->GetHours(), digitalClock->GetMinutes(), digitalClock->GetSeconds());
 }
 
 void WaterSprayTest(void)
@@ -146,4 +131,36 @@ void SongAndPlayListTest(void)
 	assert(!playList->RemoveSong("name : song4"));
 
 	playList->AddSong(song4);
+}
+
+void ClockTest(void)
+{
+
+	AnalogClock* analogClock = new AnalogClock();
+
+	analogClock->AddSeconds((short)8219);
+	printf("%d:%d:%d\n", analogClock->GetHours(), analogClock->GetMinutes(), analogClock->GetSeconds());
+	analogClock->Tick();
+	printf("%d:%d:%d\n", analogClock->GetHours(), analogClock->GetMinutes(), analogClock->GetSeconds());
+
+	DigitalClock* digitalClock = new DigitalClock(98219);
+	digitalClock->Tick();
+
+	digitalClock->SetHours(10);
+	assert(digitalClock->GetHours() == 10);
+
+	digitalClock->SetMinutes(30);
+	assert(digitalClock->GetMinutes() == 30);
+
+	digitalClock->SetSeconds(25);
+	assert(digitalClock->GetSeconds() == 25);
+
+	digitalClock->SetIsBeforeMidday(false);
+	assert(digitalClock->IsBeforeMidday() == false);
+
+	digitalClock->SetTimes(14, 28, 45);
+	assert(digitalClock->GetHours() == 14);
+	assert(digitalClock->GetMinutes() == 28);
+	assert(digitalClock->GetSeconds() == 45);
+	assert(digitalClock->IsBeforeMidday() == false);
 }

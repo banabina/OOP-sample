@@ -8,6 +8,10 @@ Clock::Clock()
 Clock::Clock(unsigned int seconds)
 	: mSeconds(seconds)
 {
+	if (mSeconds > DAY_IN_SECONDS)
+	{
+		mSeconds %= DAY_IN_SECONDS;
+	}
 }
 
 Clock& Clock::operator=(const Clock& rhs)
