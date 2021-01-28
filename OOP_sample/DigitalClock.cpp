@@ -59,7 +59,7 @@ void DigitalClock::SetSeconds(int seconds)
     mSeconds += std::max(int(std::min(59, (int)seconds)), 0);
 }
 
-bool DigitalClock::IsBeforeMidday()
+bool DigitalClock::IsBeforeMidday() const
 {
     return ((mSeconds / (DAY_IN_SECONDS / 2)) == 0);
 }

@@ -7,9 +7,9 @@ public:
 	AnalogClock();
 	AnalogClock(unsigned int seconds);
 	~AnalogClock() = default;
-	unsigned int GetSecondHandAngle();
-	unsigned int GetMinuteHandAngle();
-	unsigned int GetHourHandAngle();
+	unsigned int GetSecondHandAngle() const;
+	unsigned int GetMinuteHandAngle() const;
+	unsigned int GetHourHandAngle() const;
 	unsigned char GetHours12hourClock();
 	void AddSeconds(short seconds);
 private:

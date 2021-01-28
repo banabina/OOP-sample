@@ -20,20 +20,20 @@ Clock& Clock::operator=(const Clock& rhs)
 	return *this;
 }
 
-unsigned char Clock::GetHours()
+unsigned char Clock::GetHours() const
 {
 	int hours = mSeconds / 60 / 60;
 
 	return hours == 0 ? 12 : (unsigned char)hours;
 }
 
-unsigned char Clock::GetMinutes()
+unsigned char Clock::GetMinutes() const
 {
 
 	return (unsigned char)(mSeconds / 60 % 60);
 }
 
-unsigned char Clock::GetSeconds()
+unsigned char Clock::GetSeconds() const
 {
 	return (unsigned char)(mSeconds % 60);
 }
@@ -43,6 +43,6 @@ void Clock::Tick()
 	mSeconds = (mSeconds + 1) % DAY_IN_SECONDS;
 }
 
-void Clock::Mount()
+void Clock::Mount() const
 {
 }

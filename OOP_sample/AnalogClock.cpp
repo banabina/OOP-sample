@@ -10,17 +10,17 @@ AnalogClock::AnalogClock(unsigned int seconds)
 {
 }
 
-unsigned int AnalogClock::GetSecondHandAngle()
+unsigned int AnalogClock::GetSecondHandAngle() const
 {
 	return 0;
 }
 
-unsigned int AnalogClock::GetMinuteHandAngle()
+unsigned int AnalogClock::GetMinuteHandAngle() const
 {
 	return (unsigned int)(GetSeconds() * 6);
 }
 
-unsigned int AnalogClock::GetHourHandAngle()
+unsigned int AnalogClock::GetHourHandAngle() const
 {
 	const int ANGLE_PER_HOUR = 360 / 12;
 	unsigned int hours = GetHours() % 12;

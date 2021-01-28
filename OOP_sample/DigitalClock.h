@@ -13,6 +13,6 @@ public:
 	void SetHours(int hours);
 	void SetMinutes(int minutes);
 	void SetSeconds(int seconds);
-	bool IsBeforeMidday();
+	bool IsBeforeMidday() const;
 private:
 };

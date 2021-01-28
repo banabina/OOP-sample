@@ -7,11 +7,11 @@ public:
 	Clock(const Clock& other) = default;
 	~Clock() = default;
 	Clock& operator=(const Clock& rhs);
-	unsigned char GetHours();
-	unsigned char GetMinutes();
-	unsigned char GetSeconds();
+	unsigned char GetHours() const;
+	unsigned char GetMinutes() const;
+	unsigned char GetSeconds() const;
 	void Tick();
-	void Mount();
+	void Mount() const;
 protected:
 	unsigned int mSeconds;
 	const int DAY_IN_SECONDS = 60 * 60 * 24;
