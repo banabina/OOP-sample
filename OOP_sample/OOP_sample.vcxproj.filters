@@ -10,6 +10,9 @@
     <Filter Include="3_Clock">
       <UniqueIdentifier>{2fe981fe-13b5-488b-8ec3-fb688a23c5ef}</UniqueIdentifier>
     </Filter>
+    <Filter Include="4_Entity_Component">
+      <UniqueIdentifier>{38edd0b2-aaea-42d8-9af5-a91e74c39ad3}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="FlowerPot.h">
@@ -48,6 +51,24 @@
     <ClInclude Include="DigitalClock.h">
       <Filter>3_Clock</Filter>
     </ClInclude>
+    <ClInclude Include="GameObject.h">
+      <Filter>4_Entity_Component</Filter>
+    </ClInclude>
+    <ClInclude Include="Component.h">
+      <Filter>4_Entity_Component</Filter>
+    </ClInclude>
+    <ClInclude Include="AiComponent.h">
+      <Filter>4_Entity_Component</Filter>
+    </ClInclude>
+    <ClInclude Include="ControllableComponent.h">
+      <Filter>4_Entity_Component</Filter>
+    </ClInclude>
+    <ClInclude Include="EntityComponent.h">
+      <Filter>4_Entity_Component</Filter>
+    </ClInclude>
+    <ClInclude Include="PhsicsComponent.h">
+      <Filter>4_Entity_Component</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp" />
@@ -81,6 +102,7 @@
     <ClCompile Include="DigitalClock.cpp">
       <Filter>3_Clock</Filter>
     </ClCompile>
+    <ClCompile Include="GameObject.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="1_README.md">

@@ -139,13 +139,19 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="AiComponent.h" />
     <ClInclude Include="AnalogClock.h" />
     <ClInclude Include="Clock.h" />
+    <ClInclude Include="Component.h" />
+    <ClInclude Include="ControllableComponent.h" />
     <ClInclude Include="DigitalClock.h" />
     <ClInclude Include="EBottleSize.h" />
+    <ClInclude Include="EntityComponent.h" />
     <ClInclude Include="ESprayHeadSpeed.h" />
     <ClInclude Include="FlowerPot.h" />
+    <ClInclude Include="GameObject.h" />
     <ClInclude Include="JkTunes.h" />
+    <ClInclude Include="PhsicsComponent.h" />
     <ClInclude Include="Playlist.h" />
     <ClInclude Include="Song.h" />
     <ClInclude Include="SprayBody.h" />
@@ -157,6 +163,7 @@
     <ClCompile Include="Clock.cpp" />
     <ClCompile Include="DigitalClock.cpp" />
     <ClCompile Include="FlowerPot.cpp" />
+    <ClCompile Include="GameObject.cpp" />
     <ClCompile Include="JkTunes.cpp" />
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="Playlist.cpp" />
